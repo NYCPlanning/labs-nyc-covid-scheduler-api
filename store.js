@@ -17,7 +17,7 @@ class ApplicationAdapter extends MongodbAdapter {
 }
 
 const adapter = [ApplicationAdapter, {
-  url: process.env.MONGO_URI,
+  url: process.env.MONGODB_URI,
   useNewUrlParser: true,
 }];
 
