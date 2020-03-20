@@ -2,7 +2,7 @@ const fortune = require('fortune');
 const mongodbAdapter = require('fortune-mongodb');
 
 const { Adapter } = fortune;
-const MongodbAdapter = mongodbAdapter(Adapter);
+const MongodbAdapter = mongodbAdapter(Adapter, { useNewUrlParser: true });
 
 class ApplicationAdapter extends MongodbAdapter {
   // override find to ignore all index requests
